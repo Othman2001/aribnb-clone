@@ -6,6 +6,7 @@ import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
 import {useRouter} from "next/dist/client/router"
+import logo from "../images/logo.svg";
 function Header ({placeholder}) {
    const [search , setSearch] = useState("")
    const [startDate , setStartDate] = useState(new Date())
@@ -49,7 +50,7 @@ function Header ({placeholder}) {
             <motion.div onClick={()=> router.push('/')}
             animate = {{rotate:360 , duration: 2 }}
             className = 'relative flex items-center h-10 cursor-pointer my-auto' >
-            <Image src = 'https://links.papareact.com/qd3' layout = 'fill' objectFit = "contain" objectPosition = "left" />
+            <Image src =  {logo} layout = 'fill' objectFit = "contain" objectPosition = "left" />
             </motion.div>
             {/* middle ==> search section */}
             <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
@@ -58,7 +59,7 @@ function Header ({placeholder}) {
             value = {search}
             whileTap = {{scale:1.6}}
              type="text" className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400 " placeholder = "start your search" />
-             <SearchIcon className="hidden md:inline-flex  h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
+             <SearchIcon className="hidden md:inline-flex  h-8 bg-black text-white rounded-full p-2 cursor-pointer md:mx-2" />
             </div>
             {/* right */}
             <div className="flex space-x-4 items-center justify-end text-gray-500">
@@ -74,7 +75,7 @@ function Header ({placeholder}) {
              <DateRangePicker 
              minDate = {new Date()}
              ranges = {[selectRange]}
-             rangeColors = {["#FD5B61"]}
+             rangeColors = {["#333"]}
              onChange = {handleSelect}
              />
              <div className  = "flex items-center border-b mb-4">
@@ -91,7 +92,7 @@ function Header ({placeholder}) {
              </div>
              <div className = "flex ">
                <button className="flex-grow text-gray-500" onClick={handleCancel} >Cancel </button>
-               <button className = "flex-grow text-red-400" onClick = {hndleSearch} >Search</button>
+               <button className = "flex-grow text-purble-400  " onClick = {hndleSearch} >Search</button>
 
              </div>
                 </div>

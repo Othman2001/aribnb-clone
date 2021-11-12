@@ -13,7 +13,7 @@ export default function Home ({ exploreData, cardsData }) {
     <div>
       <Head>
         <title>
-          airbnb clone        </title>
+          lunar strategy For Hotel Reservation      </title>
        
       </Head>
                {/* header */}
